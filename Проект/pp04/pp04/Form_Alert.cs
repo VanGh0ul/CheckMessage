@@ -46,10 +46,13 @@ namespace pp04
             switch (this.action)
             {
                 case enmAction.wait:
+
                     timer1.Interval = 4000;
                     action = enmAction.close;
                     break;
+
                 case Form_Alert.enmAction.start:
+
                     this.timer1.Interval = 1;
                     this.Opacity += 0.1;
                     if (this.x < this.Location.X)
@@ -63,8 +66,11 @@ namespace pp04
                             action = Form_Alert.enmAction.wait;
                         }
                     }
-                    break;
+
+                break;
+
                 case enmAction.close:
+
                     timer1.Interval = 1;
                     this.Opacity -= 0.1;
 
@@ -74,9 +80,8 @@ namespace pp04
                         base.Close();
                     }
                     break;
-            
 
-         }
+            }
         }
 
         public void showAlert(string msg, enmType type)
@@ -110,7 +115,7 @@ namespace pp04
 
                 case enmType.Message:
                   //  this.pictureBox1.Image = Resources.success;
-                    this.BackColor = Color.SeaGreen;
+                    //this.BackColor = Color.SeaGreen;
                     break;
 
             }

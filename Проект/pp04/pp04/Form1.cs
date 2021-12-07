@@ -17,46 +17,13 @@ namespace pp04
             InitializeComponent();
         }
 
-        public int tempNoti = 1;
-
-        private void Form1_Resize(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
            
-
-        }
-
-        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-            ShowInTaskbar = true;
-            notifyIcon1.Visible = false;
-            WindowState = FormWindowState.Normal;   
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-            notifyIcon1.BalloonTipText = "Messages";
-            notifyIcon1.BalloonTipTitle = "1 mess";
-
-            if (tempNoti == 1)
-            {
-                notifyIcon2.Visible = false;
-            }
-
-        }
-
-
-        public void Alert(string msg, Form_Alert.enmType type)
-        {
-            Form_Alert frm = new Form_Alert();
-            frm.showAlert(msg, type);    
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Alert("Hi,its John",Form_Alert.enmType.Message);
+            Form2 form1 = new Form2();
+            form1.ShowDialog();
+            this.Close();
+            this.Hide();
         }
     }
 }
