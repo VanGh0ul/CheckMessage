@@ -7,16 +7,32 @@ using System.Threading.Tasks;
 
 namespace pp04
 {
-    class conDB
+    public static class ConDB
     {
 
-        MySqlConnection connection = new MySqlConnection("server=localhost;" +
-                                                         "port=3306;" +
-                                                         "username=root;" +
-                                                         "password=6199;" +
-                                                         "database=pp04"
-                                                         );
+        public static MySqlConnection GetMainConnection() {
 
+            return GetConnection("localhost", "3306", "root", "6199", "databasesList");
+        }
+
+        public static MySqlConnection GetConnection(string serverName, string port, string user, string password, string dbName) { 
+        
+            return new MySqlConnection(String.Format(
+                "server={0};" +
+                "port={1};" +
+                "username={2};" +
+                "password={3};" +
+                "database={4}",
+                serverName,
+                port,
+                user,
+                password,
+                dbName
+            ));
+        }
+
+        // MySqlConnection connection = 
+        /*
         public void openConnection()
         {
             if (connection.State == System.Data.ConnectionState.Closed)
@@ -37,7 +53,7 @@ namespace pp04
         {
             return connection;
         }
-
+        */
 
     }
 }

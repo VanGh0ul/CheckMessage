@@ -11,6 +11,13 @@ using System.Resources;
 
 namespace pp04
 {
+
+    public enum AlertType
+    {
+        Program,
+        Web
+    }
+
     public partial class Form_Alert : Form
     {
         public Form_Alert()
@@ -24,13 +31,7 @@ namespace pp04
             start,
             close
         }
-        public enum enmType
-        {
-            Message,
-            info
-        }
-
-
+        
         private Form_Alert.enmAction action;
 
         private int x, y;
@@ -84,7 +85,23 @@ namespace pp04
             }
         }
 
-        public void showAlert(string msg, enmType type)
+        private void lblMsg_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Go lc");
+        }
+
+        private void BApp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Открыть приложение");
+            //Открыть приложение
+        }
+
+        private void BWeb_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Открыть веб");
+        }
+
+        public void showAlert(string titleStr, string msg, AlertType type)
         {
             this.Opacity = 0.0;
             this.StartPosition = FormStartPosition.Manual;
@@ -101,7 +118,7 @@ namespace pp04
                 {
                     this.Name = fname;
                     this.x = Screen.PrimaryScreen.WorkingArea.Width - this.Width + 25;
-                    this.y = Screen.PrimaryScreen.WorkingArea.Height - this.Height * i - 85;
+                    this.y = Screen.PrimaryScreen.WorkingArea.Height - this.Height * i - 140;
                     this.Location = new Point(this.x, this.y);
                     break;
                 }
@@ -113,14 +130,20 @@ namespace pp04
             switch (type)
             {
 
-                case enmType.Message:
-                  //  this.pictureBox1.Image = Resources.success;
-                    //this.BackColor = Color.SeaGreen;
+                case AlertType.Program:
+                    BApp.Visible = true;
+                    BWeb.Visible = false;
+                    break;
+
+                case AlertType.Web:
+                    BApp.Visible = false;
+                    BWeb.Visible = true;
                     break;
 
             }
 
             this.lblMsg.Text = msg;
+            this.LTitle.Text = titleStr;
 
             this.Show();
             this.action = enmAction.start;

@@ -35,3 +35,4 @@ C:\Example_pp04\Проект\pp04\pp04\bin\Debug\System.Numerics.Vectors.dll
 C:\Example_pp04\Проект\pp04\pp04\bin\Debug\MySql.Data.xml
 C:\Example_pp04\Проект\pp04\pp04\obj\Debug\pp04.exe.config
 C:\Example_pp04\Проект\pp04\pp04\obj\Debug\pp04.csproj.CopyComplete
+C:\Example_pp04\Проект\pp04\pp04\obj\Debug\pp04.g.resources

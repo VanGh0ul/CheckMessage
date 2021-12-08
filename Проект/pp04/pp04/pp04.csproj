@@ -106,19 +106,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_cancel_64px.png" />
+    <Resource Include="Resources\icons8_cancel_64px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_secured_letter_50px.png" />
+    <Resource Include="Resources\icons8_secured_letter_50px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_cancel_64px_1.png" />
+    <Resource Include="Resources\icons8_cancel_64px_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_cancel_25px_1.png" />
+    <Resource Include="Resources\icons8_cancel_25px_1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_cancel_50px.png" />
+    <Resource Include="Resources\icons8_cancel_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\tray_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

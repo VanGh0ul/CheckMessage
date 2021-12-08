@@ -29,14 +29,17 @@ namespace pp04
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.button1 = new System.Windows.Forms.Button();
-            this.login = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.buttonLogin = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.DG = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.LCount = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.LLogin = new System.Windows.Forms.Label();
+            this.tBlogin = new System.Windows.Forms.TextBox();
+            this.BSetLogin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.DG)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -46,7 +49,7 @@ namespace pp04
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button1.Location = new System.Drawing.Point(921, 575);
+            this.button1.Location = new System.Drawing.Point(748, 362);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 44);
             this.button1.TabIndex = 0;
@@ -54,89 +57,101 @@ namespace pp04
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // login
+            // DG
             // 
-            this.login.Location = new System.Drawing.Point(251, 136);
-            this.login.Multiline = true;
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(153, 29);
-            this.login.TabIndex = 1;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(251, 208);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(153, 29);
-            this.textBox2.TabIndex = 2;
-            // 
-            // buttonLogin
-            // 
-            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonLogin.FlatAppearance.BorderSize = 0;
-            this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonLogin.Location = new System.Drawing.Point(254, 269);
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(153, 44);
-            this.buttonLogin.TabIndex = 3;
-            this.buttonLogin.Text = "Go";
-            this.buttonLogin.UseVisualStyleBackColor = false;
-            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(251, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "log";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(251, 192);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.DG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DG.Location = new System.Drawing.Point(12, 42);
+            this.DG.Name = "DG";
+            this.DG.ReadOnly = true;
+            this.DG.Size = new System.Drawing.Size(889, 246);
+            this.DG.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(536, 224);
+            this.label3.Location = new System.Drawing.Point(15, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Кол во сообщений:";
             // 
-            // label4
+            // LCount
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(624, 224);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
+            this.LCount.AutoSize = true;
+            this.LCount.Location = new System.Drawing.Point(125, 9);
+            this.LCount.Name = "LCount";
+            this.LCount.Size = new System.Drawing.Size(0, 13);
+            this.LCount.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(172, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Логин:";
+            // 
+            // LLogin
+            // 
+            this.LLogin.AutoSize = true;
+            this.LLogin.Location = new System.Drawing.Point(216, 9);
+            this.LLogin.Name = "LLogin";
+            this.LLogin.Size = new System.Drawing.Size(0, 13);
+            this.LLogin.TabIndex = 10;
+            // 
+            // tBlogin
+            // 
+            this.tBlogin.Location = new System.Drawing.Point(618, 6);
+            this.tBlogin.Multiline = true;
+            this.tBlogin.Name = "tBlogin";
+            this.tBlogin.Size = new System.Drawing.Size(153, 30);
+            this.tBlogin.TabIndex = 11;
+            // 
+            // BSetLogin
+            // 
+            this.BSetLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BSetLogin.FlatAppearance.BorderSize = 0;
+            this.BSetLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BSetLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BSetLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.BSetLogin.Location = new System.Drawing.Point(777, 6);
+            this.BSetLogin.Name = "BSetLogin";
+            this.BSetLogin.Size = new System.Drawing.Size(124, 30);
+            this.BSetLogin.TabIndex = 13;
+            this.BSetLogin.Text = "Установить";
+            this.BSetLogin.UseVisualStyleBackColor = false;
+            this.BSetLogin.Click += new System.EventHandler(this.BSetLogin_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(571, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Логин:";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1086, 631);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(913, 476);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonLogin);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.login);
+            this.Controls.Add(this.BSetLogin);
+            this.Controls.Add(this.tBlogin);
+            this.Controls.Add(this.LLogin);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.LCount);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.DG);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Main";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClosingToTray);
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,13 +159,14 @@ namespace pp04
 
         #endregion
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox login;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView DG;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LCount;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LLogin;
+        private System.Windows.Forms.TextBox tBlogin;
+        private System.Windows.Forms.Button BSetLogin;
+        private System.Windows.Forms.Label label1;
     }
 }
 

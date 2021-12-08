@@ -20,7 +20,7 @@ namespace pp04
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
           
-
+            /*
             NotifyIcon i = new NotifyIcon();
             i.Visible = true;
             i.Icon = new System.Drawing.Icon(@"C:\Example_pp04\Проект\pp04\message_envelope_icon_176377.ico");
@@ -61,32 +61,25 @@ namespace pp04
                 Application.Exit();
             });
 
-            
+            i.ContextMenuStrip.Items.Add("Alert_test", null, delegate {
 
-             void Alert(string msg, Form_Alert.enmType type)
+                Alert("1", Form_Alert.enmType.Message);
+                Alert("2", Form_Alert.enmType.Message);
+                Alert("3", Form_Alert.enmType.Message);
+
+            });
+ 
+
+            void Alert(string msg, Form_Alert.enmType type)
             {
                 Form_Alert frm = new Form_Alert();
                 frm.showAlert(msg, type);
             }
-
-            Alert("1", Form_Alert.enmType.Message);
-            Alert("2", Form_Alert.enmType.Message);
-            Alert("3", Form_Alert.enmType.Message);
-
-            
-
-            /* void button1_Click(object sender, EventArgs e)
-            {
-
-                this.Alert("Hi,its John", Form_Alert.enmType.Message);
-
-            }*/
+            */
 
 
+            Application.Run(new Form2());
 
-            Application.Run(new Form1());
-
-            Application.Run();
         }
     }
 }
