@@ -31,29 +31,5 @@ namespace pp04
             ));
         }
 
-        // MySqlConnection connection = 
-        /*
-        public void openConnection()
-        {
-            if (connection.State == System.Data.ConnectionState.Closed)
-            {
-                connection.Open();
-            }
-        }
-
-        public void closeConnection()
-        {
-            if (connection.State == System.Data.ConnectionState.Open)
-            {
-                connection.Close();
-            }
-        }
-
-        public MySqlConnection getConnection()
-        {
-            return connection;
-        }
-        */
-
     }
 }

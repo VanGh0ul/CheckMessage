@@ -30,6 +30,7 @@ namespace pp04
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Alert));
             this.lblMsg = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -100,7 +101,7 @@ namespace pp04
             // 
             // BApp
             // 
-            this.BApp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BApp.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.BApp.Location = new System.Drawing.Point(74, 86);
             this.BApp.Name = "BApp";
@@ -112,7 +113,7 @@ namespace pp04
             // 
             // BWeb
             // 
-            this.BWeb.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BWeb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BWeb.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.BWeb.Location = new System.Drawing.Point(74, 86);
             this.BWeb.Name = "BWeb";
@@ -136,6 +137,7 @@ namespace pp04
             this.Controls.Add(this.lblMsg);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Alert";
             this.Text = "Form_Alert";
             this.TopMost = true;
