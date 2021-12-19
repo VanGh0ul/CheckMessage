@@ -61,8 +61,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MessageType.cs" />
-    <Compile Include="monitorDB.cs" />
-    <Compile Include="Notify.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -64,7 +64,7 @@ namespace pp04
 
             MessageTimer = new Timer();
             MessageTimer.Tick += TimerTick;
-            MessageTimer.Interval = (int)TimeSpan.FromSeconds(5).TotalMilliseconds;
+            MessageTimer.Interval = (int)TimeSpan.FromMinutes(3).TotalMilliseconds;
 
             GenerateNotifyIcon();
             TrayIcon.Visible = true;
